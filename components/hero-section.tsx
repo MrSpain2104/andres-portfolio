@@ -7,22 +7,22 @@ import Link from "next/link"
 import Image from "next/image"
 // Ribbons se mostrará a nivel global desde el layout
 
+const ROTATING_TEXTS = [
+  "Transformando datos en impacto",
+  "Científico de Datos en formación",
+  "Soluciones creativas con Machine Learning",
+  "Construyendo el futuro con IA",
+] as const
+
 export default function HeroSection() {
   const [currentText, setCurrentText] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
-
-  const rotatingTexts = [
-    "Transformando datos en impacto",
-    "Científico de Datos en formación",
-    "Soluciones creativas con Machine Learning",
-    "Construyendo el futuro con IA",
-  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsTyping(false)
       setTimeout(() => {
-        setCurrentText((prev) => (prev + 1) % rotatingTexts.length)
+        setCurrentText((prev) => (prev + 1) % ROTATING_TEXTS.length)
         setIsTyping(true)
       }, 500)
     }, 4000)
@@ -61,7 +61,7 @@ export default function HeroSection() {
                   isTyping ? "typewriter" : "opacity-0"
                 }`}
               >
-                {rotatingTexts[currentText]}
+                {ROTATING_TEXTS[currentText]}
               </p>
             </div>
 

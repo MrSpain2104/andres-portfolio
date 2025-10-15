@@ -19,6 +19,15 @@ type RibbonsProps = {
   backgroundColor?: number[]
 }
 
+type RibbonLine = {
+  spring: number
+  friction: number
+  mouseVelocity: Vec3
+  mouseOffset: Vec3
+  points: Vec3[]
+  polyline: Polyline
+}
+
 const Ribbons = ({
   colors = ['#be123c', '#ff7b8a'],
   baseSpring = 0.03,
@@ -40,23 +49,23 @@ const Ribbons = ({
     if (!container) return
 
     const renderer = new Renderer({ dpr: window.devicePixelRatio || 2, alpha: true })
-  const gl = renderer.gl as unknown as WebGLRenderingContext
+    const gl = renderer.gl
     if (Array.isArray(backgroundColor) && backgroundColor.length === 4) {
       gl.clearColor(backgroundColor[0], backgroundColor[1], backgroundColor[2], backgroundColor[3])
     } else {
       gl.clearColor(0, 0, 0, 0)
     }
 
-  const canvas = (gl.canvas as unknown) as HTMLCanvasElement
-  canvas.style.position = 'absolute'
-  canvas.style.top = '0'
-  canvas.style.left = '0'
-  canvas.style.width = '100%'
-  canvas.style.height = '100%'
-  container.appendChild(canvas)
+    const canvas = gl.canvas
+    canvas.style.position = 'absolute'
+    canvas.style.top = '0'
+    canvas.style.left = '0'
+    canvas.style.width = '100%'
+    canvas.style.height = '100%'
+    container.appendChild(canvas)
 
     const scene = new Transform()
-    const lines: any[] = []
+    const lines: RibbonLine[] = []
 
     const vertex = `
       precision highp float;
@@ -138,21 +147,12 @@ const Ribbons = ({
         0
       )
 
-      const line: any = {
-        spring,
-        friction,
-        mouseVelocity: new Vec3(),
-        mouseOffset
-      }
-
-      const count = pointCount
-      const points: any[] = []
-      for (let i = 0; i < count; i++) {
+      const points: Vec3[] = []
+      for (let i = 0; i < pointCount; i++) {
         points.push(new Vec3())
       }
-      line.points = points
 
-      line.polyline = new Polyline(gl, {
+      const polyline = new Polyline(gl, {
         points,
         vertex,
         fragment,
@@ -166,6 +166,16 @@ const Ribbons = ({
           uEnableFade: { value: enableFade ? 1.0 : 0.0 }
         }
       })
+
+      const line: RibbonLine = {
+        spring,
+        friction,
+        mouseVelocity: new Vec3(),
+        mouseOffset,
+        points,
+        polyline
+      }
+
       line.polyline.mesh.setParent(scene)
       lines.push(line)
     })
@@ -173,25 +183,31 @@ const Ribbons = ({
     resize()
 
     const mouse = new Vec3()
-    function updateMouse(e: any) {
+    function updateMouse(event: MouseEvent | TouchEvent) {
       if (!container) return
-      let x: number, y: number
       const rect = container.getBoundingClientRect()
-      if (e.changedTouches && e.changedTouches.length) {
-        x = e.changedTouches[0].clientX - rect.left
-        y = e.changedTouches[0].clientY - rect.top
+      let x: number
+      let y: number
+
+      if ('changedTouches' in event && event.changedTouches.length) {
+        const touch = event.changedTouches[0]
+        x = touch.clientX - rect.left
+        y = touch.clientY - rect.top
+      } else if ('clientX' in event) {
+        const mouseEvent = event as MouseEvent
+        x = mouseEvent.clientX - rect.left
+        y = mouseEvent.clientY - rect.top
       } else {
-        x = e.clientX - rect.left
-        y = e.clientY - rect.top
+        return
       }
       const width = container.clientWidth
       const height = container.clientHeight
       mouse.set((x / width) * 2 - 1, (y / height) * -2 + 1, 0)
     }
-  // listen on window so the ribbons follow the cursor even when canvas has pointer-events:none
-  window.addEventListener('mousemove', updateMouse)
-  window.addEventListener('touchstart', updateMouse)
-  window.addEventListener('touchmove', updateMouse)
+    // listen on window so the ribbons follow the cursor even when canvas has pointer-events:none
+    window.addEventListener('mousemove', updateMouse)
+    window.addEventListener('touchstart', updateMouse)
+    window.addEventListener('touchmove', updateMouse)
 
     const tmp = new Vec3()
     let frameId: number
