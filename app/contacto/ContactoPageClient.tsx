@@ -173,7 +173,7 @@ export default function ContactoPageClient() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Ubicación</p>
-                    <p className="text-foreground">España</p>
+                    <p className="text-foreground">Barranquilla, Colombia</p>
                   </div>
                 </div>
               </CardContent>
