@@ -9,36 +9,44 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       # 1️⃣ Descarga el código
       - uses: actions/checkout@v4
 
-      # 2️⃣ Configura Node.js
+      # 2️⃣ Configura Node.js (sin cache aún)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
 
-      # 3️⃣ Habilita Corepack y asegura que pnpm esté disponible
-      - name: Enable and install pnpm
+      # 3️⃣ Instala pnpm globalmente
+      - name: Install pnpm
         run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
+          npm install -g pnpm
           pnpm --version
 
-      # 4️⃣ Instala dependencias
+      # 4️⃣ Habilita caché manualmente
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # 5️⃣ Instala dependencias
       - name: Install dependencies
         run: pnpm install
 
-      # 5️⃣ Ejecuta lint
+      # 6️⃣ Ejecuta lint
       - name: Lint
         run: pnpm lint
 
-      # 6️⃣ Compila el proyecto
+      # 7️⃣ Compila el proyecto
       - name: Build
         run: pnpm build
 
-      # 7️⃣ Ejecuta tests si existen
+      # 8️⃣ Corre tests (si existen)
       - name: Run tests (if present)
         run: pnpm test || echo "No tests configured"
