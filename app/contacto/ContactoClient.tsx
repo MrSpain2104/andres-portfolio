@@ -46,7 +46,7 @@ export default function ContactoClient() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Ubicación</p>
-                    <p className="text-foreground">España</p>
+                    <p className="text-foreground">Barranquilla, Colombia</p>
                   </div>
                 </div>
               </CardContent>
@@ -114,7 +114,7 @@ export default function ContactoClient() {
         >
           <h3 className="text-lg font-semibold text-foreground mb-2">¿Tienes un proyecto en mente?</h3>
           <p className="text-muted-foreground mb-4">
-            Estoy siempre abierto a discutir nuevas oportunidades y colaboraciones interesantes.
+            Estoy siempre abierto a descubrir nuevas oportunidades y colaboraciones interesantes.
           </p>
           <Button
             variant="outline"
