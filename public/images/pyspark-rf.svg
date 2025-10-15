@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0b0f"/>
+      <stop offset="100%" stop-color="#101116"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#ff7b8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Random forest stylized trees -->
+  <g stroke="#272730" fill="#15151b">
+    <rect x="220" y="200" width="120" height="260" rx="8"/>
+    <rect x="380" y="240" width="120" height="220" rx="8"/>
+    <rect x="540" y="220" width="120" height="240" rx="8"/>
+    <rect x="700" y="260" width="120" height="200" rx="8"/>
+    <rect x="860" y="230" width="120" height="230" rx="8"/>
+  </g>
+  <polyline points="220,480 280,430 340,470 400,420 460,460 520,410 580,450 640,400 700,440 760,380 820,420 880,360 940,400" fill="none" stroke="url(#accent)" stroke-width="6"/>
+  <text x="80" y="600" font-family="Segoe UI, Arial" font-size="18" fill="#9ca3af">PySpark · Random Forest · Interpretabilidad</text>
+</svg>

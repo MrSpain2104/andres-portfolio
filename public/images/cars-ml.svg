@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0b0f"/>
+      <stop offset="100%" stop-color="#131217"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#ff7b8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Car shape stylized -->
+  <path d="M300 380 Q360 300 480 300 L740 300 Q820 300 860 360 L900 420 H300 Z" fill="#15151a" stroke="#26262e"/>
+  <circle cx="400" cy="420" r="40" fill="#0f0f13" stroke="#2a2a33"/>
+  <circle cx="780" cy="420" r="40" fill="#0f0f13" stroke="#2a2a33"/>
+  <rect x="520" y="260" width="160" height="30" rx="6" fill="url(#accent)" opacity=".8"/>
+  <!-- Chart -->
+  <polyline points="150,500 250,460 350,470 450,430 550,440 650,410 750,400 850,360 950,370" fill="none" stroke="url(#accent)" stroke-width="6"/>
+  <text x="80" y="600" font-family="Segoe UI, Arial" font-size="18" fill="#9ca3af">Clasificación & Regresión · Autos · scikit-learn</text>
+</svg>

@@ -1,0 +1,19 @@
+.ribbons-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40; /* sit above most content so ribbons act like custom cursor */
+}
+
+.ribbons-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none;
+}
+
+/* When used inside hero, let content layer above ribbons */
+.hero-with-ribbons {
+  position: relative;
+  z-index: 1;
+}
