@@ -10,32 +10,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1️ Descarga el código del repo
+      # 1️⃣ Descarga el código
       - uses: actions/checkout@v4
 
-      # 2️ Configura Node.js (usa versión 18 y activa caché para pnpm)
+      # 2️⃣ Configura Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
 
-      # 3️ Habilita pnpm (incluido en Node vía Corepack)
-      - name: Enable pnpm
-        run: corepack enable
+      # 3️⃣ Habilita Corepack y asegura que pnpm esté disponible
+      - name: Enable and install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm --version
 
-      # 4️ Instala dependencias del proyecto
+      # 4️⃣ Instala dependencias
       - name: Install dependencies
         run: pnpm install
 
-      # 5️ Ejecuta el linter (Next.js)
+      # 5️⃣ Ejecuta lint
       - name: Lint
         run: pnpm lint
 
-      # 6️ Compila el proyecto Next.js
+      # 6️⃣ Compila el proyecto
       - name: Build
         run: pnpm build
 
-      # 7️ Ejecuta tests (si existen)
+      # 7️⃣ Ejecuta tests si existen
       - name: Run tests (if present)
         run: pnpm test || echo "No tests configured"
