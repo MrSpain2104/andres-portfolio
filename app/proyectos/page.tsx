@@ -9,10 +9,11 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Proyectos | Andrés España - Científico de Datos",
   description:
-    "Explora proyectos reales: Dashboard de Conversiones a GNCV en Colombia (Dash) y una app de gestión de posts y comentarios (Django).",
+    "Explora proyectos reales: Dashboard de Conversiones a GNCV (Dash), Dashboard de Energía Eólica en Colombia (Streamlit) y una app de gestión de posts y comentarios (Django).",
   openGraph: {
     title: "Proyectos | Andrés España - Científico de Datos",
-    description: "Dashboard GNCV (Dash), App de Posts/Comentarios (Django) y mini-proyectos en Jupyter (Carros, Aire Seúl, Bayesiano, PySpark RF, Credit Scoring).",
+    description:
+      "Dashboard GNCV (Dash), Dashboard Energía Eólica (Streamlit), App de Posts/Comentarios (Django) y mini-proyectos en Jupyter (Credit Scoring, Carros, Aire Seúl, Bayesiano, PySpark RF).",
   },
 }
 
@@ -23,7 +24,7 @@ export default function ProyectosPage() {
       title: "Dashboard de Conversiones a GNCV en Colombia",
       description:
         "Dashboard interactivo (Dash) para analizar conversiones a GNCV en Colombia: KPIs, tendencia temporal con promedio móvil, top 10 municipios y mapa geográfico con filtros por año y departamento.",
-  image: "/images/gncv-dashboard.svg",
+      image: "/images/gvc.png",
       technologies: ["Python", "Plotly Dash", "Pandas"],
       github: "https://github.com/AndreSpain2104/Dashboard_Conversiones_GNCV_Colombia",
       demo: "https://entregabledash.onrender.com",
@@ -31,68 +32,79 @@ export default function ProyectosPage() {
     },
     {
       id: 2,
-      title: "Aplicación de Gestión de Posts y Comentarios",
+      title: "Dashboard de Energía Eólica en Colombia",
       description:
-        "Aplicación CRUD para posts y comentarios creada como parte de un laboratorio de Bases de Datos, enfocada en diseño y modelamiento relacional.",
-  image: "/images/django-app.svg",
-      technologies: ["Python", "Django", "SQLite"],
-      github: "https://github.com/AndreSpain2104?tab=repositories",
-      demo: "#",
+        "Dashboard interactivo (Streamlit) para explorar el potencial y desarrollo de la energía eólica en Colombia con métricas clave, gráficos dinámicos y mapa con filtros por departamento y categoría.",
+      image: "/images/wind-dashboard.svg",
+      technologies: ["Python", "Streamlit", "Pandas", "Plotly", "Folium", "Docker"],
+      github: "https://github.com/AndreSpain2104/EolicaDocker",
+      demo: "https://eolicadocker.onrender.com",
       featured: true,
     },
     {
       id: 3,
+      title: "Aplicación de Gestión de Posts y Comentarios",
+      description:
+        "Aplicación CRUD para posts y comentarios creada como parte de un laboratorio de Bases de Datos, enfocada en diseño y modelamiento relacional.",
+      image: "/images/django-app.svg",
+      technologies: ["Python", "Django", "SQLite"],
+      github: "https://github.com/AndreSpain2104/TwitterClone_BBDD",
+      demo: "#",
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "Scoring Crediticio (GiveMeSomeCredit)",
+      description:
+        "Jupyter Book con EDA, balanceo (SMOTE/ADASYN), benchmarking (KNN, NB, LR, RF, XGBoost, SVM), tuning (Grid/Optuna), validación e interpretabilidad (LIME).",
+      image: "/images/credit-scoring.svg",
+      technologies: ["Python", "Jupyter","scikit-learn", "XGBoost", "SMOTE"],
+      github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
+      demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
+      featured: false,
+    },
+    {
+      id: 5,
       title: "Clasificación y Regresión para Ventas de Carros",
       description:
         "Mini-proyecto en Jupyter: modelos de clasificación y regresión aplicados al dominio de ventas de automóviles.",
-  image: "/images/cars-ml.svg",
+      image: "/images/cars-ml.svg",
       technologies: ["Python", "scikit-learn", "Jupyter"],
       github: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
       demo: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
       featured: false,
     },
     {
-      id: 4,
+      id: 6,
       title: "Polución y Calidad del Aire en Seúl",
       description:
         "EDA y modelos predictivos sobre la calidad del aire en Seúl, evaluando indicadores contaminantes y tendencias.",
-  image: "/images/air-quality-seoul.svg",
+      image: "/images/air-quality-seoul.svg",
       technologies: ["Python", "Pandas", "Matplotlib", "Jupyter"],
       github: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
       demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
       featured: false,
     },
     {
-      id: 5,
-      title: "Proyecto Clasificador Bayesiano (GaussianNB)",
+      id: 7,
+      title: "Clasificador Bayesiano (GaussianNB)",
       description:
         "Clasificación de enfermedad cardíaca con GaussianNB. Pipeline, evaluación y comparación con otros modelos.",
-  image: "/images/bayes-classifier.svg",
+      image: "/images/bayes-classifier.svg",
       technologies: ["Python", "scikit-learn", "GaussianNB", "Jupyter"],
       github: "https://omedinaavilla.github.io/Test_Informe/intro.html",
       demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
       featured: false,
     },
     {
-      id: 6,
-      title: "Random Forest en PySpark — Lending Club",
+      id: 8,
+      title: "PySpark vs scikit-learn  — Lending Club",
       description:
         "Clasificación de estado del préstamo (Default/Fully Paid) con scikit-learn y PySpark MLlib. Incluye interpretabilidad con LIME.",
-  image: "/images/pyspark-rf.svg",
+      image: "/images/pyspark-rf.svg",
       technologies: ["Python", "PySpark", "scikit-learn", "LIME", "Jupyter"],
       github: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
       demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
-      featured: false,
-    },
-    {
-      id: 7,
-      title: "Scoring Crediticio (GiveMeSomeCredit)",
-      description:
-        "Jupyter Book con EDA, balanceo (SMOTE/ADASYN), benchmarking (KNN, NB, LR, RF, XGBoost, SVM), tuning (Grid/Optuna), validación e interpretabilidad (LIME).",
-      image: "/images/credit-scoring.svg",
-      technologies: ["Python", "Jupyter", "XGBoost", "SMOTE", "Optuna"],
-      github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
-      demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
       featured: false,
     },
   ]

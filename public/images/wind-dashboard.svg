@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title desc">
+  <title>Dashboard de energía eólica</title>
+  <desc>Ilustración estilizada de turbinas de viento y un dashboard de datos</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)" />
+  <rect x="32" y="36" width="176" height="112" rx="12" fill="#111827" opacity="0.75" />
+  <rect x="56" y="64" width="56" height="24" rx="6" fill="#22d3ee" opacity="0.9" />
+  <rect x="124" y="64" width="56" height="24" rx="6" fill="#38bdf8" opacity="0.7" />
+  <rect x="56" y="100" width="124" height="16" rx="8" fill="#f8fafc" opacity="0.65" />
+  <g opacity="0.8">
+    <rect x="240" y="48" width="120" height="80" rx="12" fill="#0f172a" />
+    <polyline points="252,104 268,88 288,92 312,72 332,88 348,60" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="268" cy="88" r="4" fill="#38bdf8" />
+    <circle cx="288" cy="92" r="4" fill="#38bdf8" />
+    <circle cx="312" cy="72" r="4" fill="#38bdf8" />
+    <circle cx="332" cy="88" r="4" fill="#38bdf8" />
+  </g>
+  <g fill="#f8fafc" opacity="0.9">
+    <rect x="40" y="188" width="48" height="48" rx="10" />
+    <rect x="112" y="176" width="48" height="60" rx="10" />
+    <rect x="184" y="164" width="48" height="72" rx="10" />
+    <rect x="256" y="152" width="48" height="84" rx="10" />
+  </g>
+  <g transform="translate(80 220)">
+    <line x1="0" y1="0" x2="0" y2="-72" stroke="#e2e8f0" stroke-width="4" />
+    <circle cx="0" cy="-72" r="10" fill="#94a3b8" />
+    <line x1="0" y1="-72" x2="-36" y2="-108" stroke="#e2e8f0" stroke-width="4" />
+    <line x1="0" y1="-72" x2="36" y2="-108" stroke="#e2e8f0" stroke-width="4" />
+  </g>
+  <g transform="translate(168 236)">
+    <line x1="0" y1="0" x2="0" y2="-96" stroke="#e2e8f0" stroke-width="4" />
+    <circle cx="0" cy="-96" r="10" fill="#94a3b8" />
+    <line x1="0" y1="-96" x2="-40" y2="-136" stroke="#e2e8f0" stroke-width="4" />
+    <line x1="0" y1="-96" x2="40" y2="-136" stroke="#e2e8f0" stroke-width="4" />
+  </g>
+  <g transform="translate(264 240)">
+    <line x1="0" y1="0" x2="0" y2="-112" stroke="#e2e8f0" stroke-width="4" />
+    <circle cx="0" cy="-112" r="10" fill="#94a3b8" />
+    <line x1="0" y1="-112" x2="-44" y2="-156" stroke="#e2e8f0" stroke-width="4" />
+    <line x1="0" y1="-112" x2="44" y2="-156" stroke="#e2e8f0" stroke-width="4" />
+  </g>
+</svg>
