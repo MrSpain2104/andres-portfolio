@@ -42,6 +42,17 @@ export default function ProyectosPage() {
       featured: true,
     },
     {
+      id: 9,
+      title: "Bitcoin Dashboard — Análisis y Pronóstico",
+      description:
+        "Dashboard interactivo para análisis y pronóstico del precio de Bitcoin. Incluye series OHLCV, indicadores técnicos (RSI, medias móviles, bandas de Bollinger), correlaciones y pronósticos con Prophet.",
+      image: "/images/BTC.png",
+      technologies: ["Python", "Dash", "Plotly", "Prophet", "PostgreSQL", "Docker"],
+      github: "#",
+      demo: "https://btc-dashboard-wn3v.onrender.com",
+      featured: true,
+    },
+    {
       id: 3,
       title: "Aplicación de Gestión de Posts y Comentarios",
       description:
