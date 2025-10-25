@@ -35,7 +35,7 @@ export default function ProyectosPage() {
       title: "Dashboard de Energía Eólica en Colombia",
       description:
         "Dashboard interactivo (Streamlit) para explorar el potencial y desarrollo de la energía eólica en Colombia con métricas clave, gráficos dinámicos y mapa con filtros por departamento y categoría.",
-      image: "/images/wind-dashboard.svg",
+      image: "/images/eolic.png?v=2",
       technologies: ["Python", "Streamlit", "Pandas", "Plotly", "Folium", "Docker"],
       github: "https://github.com/AndreSpain2104/EolicaDocker",
       demo: "https://eolicadocker.onrender.com",
@@ -57,7 +57,7 @@ export default function ProyectosPage() {
       title: "Aplicación de Gestión de Posts y Comentarios",
       description:
         "Aplicación CRUD para posts y comentarios creada como parte de un laboratorio de Bases de Datos, enfocada en diseño y modelamiento relacional.",
-      image: "/images/django-app.svg",
+      image: "/images/django-posts.svg?v=1",
       technologies: ["Python", "Django", "SQLite"],
       github: "https://github.com/AndreSpain2104/TwitterClone_BBDD",
       demo: "#",
@@ -79,7 +79,7 @@ export default function ProyectosPage() {
       title: "Clasificación y Regresión para Ventas de Carros",
       description:
         "Mini-proyecto en Jupyter: modelos de clasificación y regresión aplicados al dominio de ventas de automóviles.",
-      image: "/images/cars-ml.svg",
+      image: "/images/cars-analytics.svg?v=1",
       technologies: ["Python", "scikit-learn", "Jupyter"],
       github: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
       demo: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
@@ -101,7 +101,7 @@ export default function ProyectosPage() {
       title: "Clasificador Bayesiano (GaussianNB)",
       description:
         "Clasificación de enfermedad cardíaca con GaussianNB. Pipeline, evaluación y comparación con otros modelos.",
-      image: "/images/bayes-classifier.svg",
+      image: "/images/bayes_cardiaca.png?v=2",
       technologies: ["Python", "scikit-learn", "GaussianNB", "Jupyter"],
       github: "https://omedinaavilla.github.io/Test_Informe/intro.html",
       demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
