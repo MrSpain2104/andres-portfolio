@@ -67,7 +67,7 @@ export default function ProyectosPage() {
       id: 4,
       title: "Scoring Crediticio (GiveMeSomeCredit)",
       description:
-        "Jupyter Book con EDA, balanceo (SMOTE/ADASYN), benchmarking (KNN, NB, LR, RF, XGBoost, SVM), tuning (Grid/Optuna), validación e interpretabilidad (LIME).",
+        "Proyecto de “scoring crediticio inteligente” en el que se implementó un pipeline para evaluar la probabilidad de incumplimiento de préstamos. El trabajo incluyó preprocesamiento y limpieza de datos, ingeniería de características, entrenamiento y validación de modelos supervisados, y análisis de resultados para la toma de decisiones crediticias.",
       image: "/images/credit-scoring.svg",
       technologies: ["Python", "Jupyter","scikit-learn", "XGBoost", "SMOTE"],
       github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
@@ -78,10 +78,10 @@ export default function ProyectosPage() {
       id: 5,
       title: "Clasificación y Regresión para Ventas de Carros",
       description:
-        "Mini-proyecto en Jupyter: modelos de clasificación y regresión aplicados al dominio de ventas de automóviles.",
+        "Proyecto en Python orientado a la aplicación de técnicas de Machine Learning en el dominio de ventas de automóviles. Se desarrollaron modelos de regresión (Ridge y Lasso) para la predicción de precios de autos usados, complementados con imputación de datos faltantes y análisis exploratorio de variables.",
       image: "/images/cars-analytics.svg?v=1",
       technologies: ["Python", "scikit-learn", "Jupyter"],
-      github: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
+  github: "https://github.com/juantellas/ClasificacionPrediccionCarros_ML_MP3_JAAEOM",
       demo: "https://juantellas.github.io/ClasificacionPrediccionCarros_ML_MP3_JAAEOM/intro.html",
       featured: false,
     },
@@ -89,7 +89,7 @@ export default function ProyectosPage() {
       id: 6,
       title: "Polución y Calidad del Aire en Seúl",
       description:
-        "EDA y modelos predictivos sobre la calidad del aire en Seúl, evaluando indicadores contaminantes y tendencias.",
+        "Estudio exploratorio de datos de calidad del aire en Seúl para comprender la variación de contaminantes a lo largo del tiempo y su relación con condiciones meteorológicas. El proyecto busca aportar una visión integral del impacto ambiental urbano mediante técnicas de análisis y visualización en Python.",
       image: "/images/air-quality-seoul.svg",
       technologies: ["Python", "Pandas", "Matplotlib", "Jupyter"],
       github: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
@@ -98,7 +98,7 @@ export default function ProyectosPage() {
     },
     {
       id: 7,
-      title: "Clasificador Bayesiano (GaussianNB)",
+      title: "Clasificador Bayesiano de enfermedad cardíaca",
       description:
         "Clasificación de enfermedad cardíaca con GaussianNB. Pipeline, evaluación y comparación con otros modelos.",
       image: "/images/bayes_cardiaca.png?v=2",
@@ -198,7 +198,7 @@ export default function ProyectosPage() {
 
           {/* Mini Projects Section */}
           <div className="fade-in-up" style={{ animationDelay: "0.6s" }}>
-            <h2 className="text-2xl font-bold mb-8 text-foreground">Miniproyectos de Machine Learning Jupyter Books</h2>
+            <h2 className="text-2xl font-bold mb-8 text-foreground">Proyectos de Machine Learning - Jupyter Books</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {otherProjects.map((project, index) => (

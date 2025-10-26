@@ -73,10 +73,16 @@ export default function SobreMiPage() {
                 </p>
               </div>
 
-              <Button className="mt-8 glow-hover group" size="lg">
-                <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-                Descargar CV
+              <Button asChild className="mt-8 glow-hover group" size="lg">
+                <a href="/files/CV-Andres-Espana.pdf" download>
+                  <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                  Descargar CV
+                </a>
               </Button>
+              <p className="mt-3 text-sm text-muted-foreground">
+                Para habilitar la descarga, coloca tu CV en <code className="bg-muted px-1 rounded">/public/files/CV-Andres-Espana.pdf</code>.
+                Hay un README en esa carpeta con instrucciones.
+              </p>
             </div>
           </div>
 

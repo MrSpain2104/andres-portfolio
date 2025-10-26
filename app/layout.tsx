@@ -72,6 +72,7 @@ export default function RootLayout({
     <html lang="es" className="dark">
       <head>
         <link rel="canonical" href="https://andres-espana-portfolio.vercel.app" />
+        <link rel="icon" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#be123c" />
       </head>
