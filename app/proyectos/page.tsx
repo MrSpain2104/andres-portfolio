@@ -70,8 +70,8 @@ export default function ProyectosPage() {
         "Proyecto de “scoring crediticio inteligente” en el que se implementó un pipeline para evaluar la probabilidad de incumplimiento de préstamos. El trabajo incluyó preprocesamiento y limpieza de datos, ingeniería de características, entrenamiento y validación de modelos supervisados, y análisis de resultados para la toma de decisiones crediticias.",
       image: "/images/credit-scoring.svg",
       technologies: ["Python", "Jupyter","scikit-learn", "XGBoost", "SMOTE"],
-      github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
-      demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
+  github: "https://github.com/mrspain2104/credit_scoring_machine_learning",
+  demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
       featured: false,
     },
     {
@@ -92,8 +92,8 @@ export default function ProyectosPage() {
         "Estudio exploratorio de datos de calidad del aire en Seúl para comprender la variación de contaminantes a lo largo del tiempo y su relación con condiciones meteorológicas. El proyecto busca aportar una visión integral del impacto ambiental urbano mediante técnicas de análisis y visualización en Python.",
       image: "/images/air-quality-seoul.svg",
       technologies: ["Python", "Pandas", "Matplotlib", "Jupyter"],
-      github: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
-      demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
+  github: "https://github.com/juantellas/EDA_airQuality_Seoul_ver2",
+  demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
       featured: false,
     },
     {
@@ -103,8 +103,8 @@ export default function ProyectosPage() {
         "Clasificación de enfermedad cardíaca con GaussianNB. Pipeline, evaluación y comparación con otros modelos.",
       image: "/images/bayes_cardiaca.png?v=2",
       technologies: ["Python", "scikit-learn", "GaussianNB", "Jupyter"],
-      github: "https://omedinaavilla.github.io/Test_Informe/intro.html",
-      demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
+  github: "https://github.com/omedinaavilla/Test_Informe",
+  demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
       featured: false,
     },
     {
@@ -114,8 +114,8 @@ export default function ProyectosPage() {
         "Clasificación de estado del préstamo (Default/Fully Paid) con scikit-learn y PySpark MLlib. Incluye interpretabilidad con LIME.",
       image: "/images/pyspark-rf.svg",
       technologies: ["Python", "PySpark", "scikit-learn", "LIME", "Jupyter"],
-      github: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
-      demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
+  github: "https://github.com/omedinaavilla/modeloPyspark",
+  demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
       featured: false,
     },
   ]

@@ -79,10 +79,6 @@ export default function SobreMiPage() {
                   Descargar CV
                 </a>
               </Button>
-              <p className="mt-3 text-sm text-muted-foreground">
-                Para habilitar la descarga, coloca tu CV en <code className="bg-muted px-1 rounded">/public/files/CV-Andres-Espana.pdf</code>.
-                Hay un README en esa carpeta con instrucciones.
-              </p>
             </div>
           </div>
 
