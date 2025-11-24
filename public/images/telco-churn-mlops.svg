@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="telco-title">
+  <title id="telco-title">Telco Customer Churn MLOps - Machine Learning Pipeline</title>
+  <defs>
+    <linearGradient id="bgGradTelco" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradTelco)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <path d="M0 50 L800 50 M0 150 L800 150 M0 250 L800 250 M0 350 L800 350 M0 450 L800 450 M0 550 L800 550" stroke="#fff" stroke-width="1"/>
+    <path d="M100 0 L100 600 M200 0 L200 600 M300 0 L300 600 M400 0 L400 600 M500 0 L500 600 M600 0 L600 600 M700 0 L700 600" stroke="#fff" stroke-width="1"/>
+  </g>
+  
+  <!-- Main ML Pipeline Flow -->
+  <!-- Data Input -->
+  <g>
+    <rect x="50" y="180" width="120" height="80" rx="8" fill="url(#cardGrad)" stroke="#93c5fd" stroke-width="2"/>
+    <text x="110" y="215" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Datos</text>
+    <text x="110" y="235" font-family="Arial, sans-serif" font-size="12" fill="#e0f2fe" text-anchor="middle">Telco</text>
+    <circle cx="110" cy="200" r="3" fill="#fbbf24"/>
+    <circle cx="110" cy="250" r="3" fill="#fbbf24"/>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M170 220 L220 220" stroke="#93c5fd" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- EDA -->
+  <g>
+    <rect x="220" y="180" width="120" height="80" rx="8" fill="url(#cardGrad)" stroke="#93c5fd" stroke-width="2"/>
+    <text x="280" y="210" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">EDA</text>
+    <text x="280" y="230" font-family="Arial, sans-serif" font-size="11" fill="#e0f2fe" text-anchor="middle">Análisis</text>
+    <rect x="250" y="238" width="60" height="3" fill="#10b981" rx="1.5"/>
+    <rect x="250" y="245" width="45" height="3" fill="#06b6d4" rx="1.5"/>
+    <rect x="250" y="252" width="50" height="3" fill="#8b5cf6" rx="1.5"/>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M340 220 L390 220" stroke="#93c5fd" stroke-width="3" fill="none"/>
+  
+  <!-- ML Models -->
+  <g>
+    <rect x="390" y="100" width="140" height="240" rx="8" fill="#1e293b" stroke="#93c5fd" stroke-width="2"/>
+    <text x="460" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Modelos ML</text>
+    
+    <!-- Model boxes -->
+    <rect x="410" y="145" width="100" height="30" rx="4" fill="#3b82f6" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="460" y="165" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">Random Forest</text>
+    
+    <rect x="410" y="185" width="100" height="30" rx="4" fill="#3b82f6" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="460" y="205" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">XGBoost</text>
+    
+    <rect x="410" y="225" width="100" height="30" rx="4" fill="#3b82f6" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="460" y="245" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">LightGBM</text>
+    
+    <rect x="410" y="265" width="100" height="30" rx="4" fill="#6366f1" stroke="#818cf8" stroke-width="1.5"/>
+    <text x="460" y="285" font-family="Arial, sans-serif" font-size="11" fill="#fff" text-anchor="middle">LIME</text>
+    
+    <!-- Metrics -->
+    <text x="460" y="315" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Métricas:</text>
+    <text x="460" y="330" font-family="Arial, sans-serif" font-size="9" fill="#10b981" text-anchor="middle">AUC-ROC: 0.87</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M530 220 L580 220" stroke="#93c5fd" stroke-width="3" fill="none"/>
+  
+  <!-- Deployment -->
+  <g>
+    <rect x="580" y="150" width="170" height="140" rx="8" fill="#0f172a" stroke="#93c5fd" stroke-width="2"/>
+    <text x="665" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Despliegue</text>
+    
+    <!-- FastAPI -->
+    <rect x="600" y="195" width="130" height="35" rx="6" fill="#059669" stroke="#10b981" stroke-width="2"/>
+    <text x="665" y="218" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">FastAPI</text>
+    
+    <!-- Docker -->
+    <rect x="600" y="245" width="130" height="35" rx="6" fill="#2563eb" stroke="#3b82f6" stroke-width="2"/>
+    <text x="665" y="268" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Docker</text>
+  </g>
+  
+  <!-- Bottom labels -->
+  <g>
+    <circle cx="400" cy="400" r="35" fill="#ef4444" opacity="0.2"/>
+    <circle cx="400" cy="400" r="25" fill="#ef4444" opacity="0.4"/>
+    <circle cx="400" cy="400" r="15" fill="#ef4444"/>
+    <text x="400" y="405" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">Churn</text>
+    
+    <text x="400" y="450" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">MLOps Pipeline</text>
+    <text x="400" y="475" font-family="Arial, sans-serif" font-size="12" fill="#cbd5e1" text-anchor="middle">Predicción de abandono de clientes</text>
+  </g>
+  
+  <!-- Tech stack icons -->
+  <g opacity="0.8">
+    <rect x="50" y="520" width="60" height="25" rx="4" fill="#2563eb"/>
+    <text x="80" y="537" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Python</text>
+    
+    <rect x="120" y="520" width="60" height="25" rx="4" fill="#10b981"/>
+    <text x="150" y="537" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">FastAPI</text>
+    
+    <rect x="190" y="520" width="60" height="25" rx="4" fill="#3b82f6"/>
+    <text x="220" y="537" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Docker</text>
+    
+    <rect x="260" y="520" width="50" height="25" rx="4" fill="#8b5cf6"/>
+    <text x="285" y="537" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">LIME</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#93c5fd"/>
+    </marker>
+  </defs>
+</svg>

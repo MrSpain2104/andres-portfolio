@@ -9,11 +9,11 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Proyectos | Andrés España - Científico de Datos",
   description:
-    "Explora proyectos reales: Dashboard de Conversiones a GNCV (Dash), Dashboard de Energía Eólica en Colombia (Streamlit) y una app de gestión de posts y comentarios (Django).",
+    "Explora proyectos reales: Dashboards interactivos, MLOps para predicción de churn, bot de automatización con n8n, y análisis de datos con Python y Machine Learning.",
   openGraph: {
     title: "Proyectos | Andrés España - Científico de Datos",
     description:
-      "Dashboard GNCV (Dash), Dashboard Energía Eólica (Streamlit), App de Posts/Comentarios (Django) y mini-proyectos en Jupyter (Credit Scoring, Carros, Aire Seúl, Bayesiano, PySpark RF).",
+      "Proyectos destacados: Dashboards (GNCV, Energía Eólica, Bitcoin), MLOps Pipeline (Telco Churn), Bot de automatización (n8n + Telegram), y mini-proyectos de ML con Python.",
   },
 }
 
@@ -48,7 +48,7 @@ export default function ProyectosPage() {
         "Dashboard interactivo para análisis y pronóstico del precio de Bitcoin. Incluye series OHLCV, indicadores técnicos (RSI, medias móviles, bandas de Bollinger), correlaciones y pronósticos con Prophet.",
       image: "/images/BTC.png",
       technologies: ["Python", "Dash", "Plotly", "Prophet", "PostgreSQL", "Docker"],
-      github: "https://github.com/AndreSpain2104/BTC",
+      github: "#",
       demo: "https://btc-dashboard-wn3v.onrender.com",
       featured: true,
     },
@@ -64,14 +64,25 @@ export default function ProyectosPage() {
       featured: true,
     },
     {
+      id: 10,
+      title: "Telco Customer Churn - MLOps Pipeline",
+      description:
+        "Proyecto de Machine Learning y MLOps para predecir el abandono (churn) de clientes en una empresa de telecomunicaciones. Incluye análisis exploratorio, entrenamiento de modelos, interpretabilidad con LIME y despliegue con FastAPI y Docker.",
+      image: "/images/telco-churn-mlops.svg",
+      technologies: ["Python", "FastAPI", "Docker", "LIME", "XGBoost", "MLOps"],
+      github: "https://github.com/MrSpain2104/Telco-Customer-Churn-Mlops",
+      demo: "https://mrspain2104.github.io/Telco-Customer-Churn-Mlops/intro.html",
+      featured: true,
+    },
+    {
       id: 4,
       title: "Scoring Crediticio (GiveMeSomeCredit)",
       description:
         "Proyecto de “scoring crediticio inteligente” en el que se implementó un pipeline para evaluar la probabilidad de incumplimiento de préstamos. El trabajo incluyó preprocesamiento y limpieza de datos, ingeniería de características, entrenamiento y validación de modelos supervisados, y análisis de resultados para la toma de decisiones crediticias.",
       image: "/images/credit-scoring.svg",
       technologies: ["Python", "Jupyter","scikit-learn", "XGBoost", "SMOTE"],
-  github: "https://github.com/MrSpain2104/credit_scoring_machine_learning",
-  demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
+      github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
+      demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
       featured: false,
     },
     {
@@ -92,8 +103,8 @@ export default function ProyectosPage() {
         "Estudio exploratorio de datos de calidad del aire en Seúl para comprender la variación de contaminantes a lo largo del tiempo y su relación con condiciones meteorológicas. El proyecto busca aportar una visión integral del impacto ambiental urbano mediante técnicas de análisis y visualización en Python.",
       image: "/images/air-quality-seoul.svg",
       technologies: ["Python", "Pandas", "Matplotlib", "Jupyter"],
-  github: "https://github.com/juantellas/EDA_airQuality_Seoul_ver2",
-  demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
+      github: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
+      demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
       featured: false,
     },
     {
@@ -103,8 +114,8 @@ export default function ProyectosPage() {
         "Clasificación de enfermedad cardíaca con GaussianNB. Pipeline, evaluación y comparación con otros modelos.",
       image: "/images/bayes_cardiaca.png?v=2",
       technologies: ["Python", "scikit-learn", "GaussianNB", "Jupyter"],
-  github: "https://github.com/omedinaavilla/Test_Informe",
-  demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
+      github: "https://omedinaavilla.github.io/Test_Informe/intro.html",
+      demo: "https://omedinaavilla.github.io/Test_Informe/intro.html",
       featured: false,
     },
     {
@@ -114,8 +125,19 @@ export default function ProyectosPage() {
         "Clasificación de estado del préstamo (Default/Fully Paid) con scikit-learn y PySpark MLlib. Incluye interpretabilidad con LIME.",
       image: "/images/pyspark-rf.svg",
       technologies: ["Python", "PySpark", "scikit-learn", "LIME", "Jupyter"],
-  github: "https://github.com/omedinaavilla/modeloPyspark",
-  demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
+      github: "https://github.com/omedinaavilla/modeloPyspark",
+      demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",
+      featured: false,
+    },
+    {
+      id: 11,
+      title: "Bot de Alertas Bitcoin con n8n",
+      description:
+        "Sistema de automatización ETL que consulta cada hora el precio de Bitcoin desde Yahoo Finance, almacena datos históricos en Google Sheets y envía alertas por Telegram cuando detecta movimientos bruscos de precio. Flujo completo implementado en n8n.",
+      image: "/images/n8n-bitcoin-bot.svg",
+      technologies: ["n8n", "Telegram Bot", "Google Sheets", "Yahoo Finance", "ETL"],
+      github: "#",
+      demo: "#",
       featured: false,
     },
   ]
