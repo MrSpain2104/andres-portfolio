@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="seoul-title">
+  <title id="seoul-title">Air Quality Seoul - Análisis de Calidad del Aire</title>
+  <defs>
+    <linearGradient id="bgGradSeoul" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#312e81;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e1b4b;stop-opacity:0.8" />
+    </linearGradient>
+    <radialGradient id="smogGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradSeoul)"/>
+  
+  <!-- City skyline silhouette -->
+  <g opacity="0.4" fill="#1e1b4b">
+    <rect x="50" y="400" width="60" height="200"/>
+    <rect x="120" y="350" width="80" height="250"/>
+    <rect x="210" y="380" width="50" height="220"/>
+    <rect x="270" y="320" width="90" height="280"/>
+    <rect x="370" y="360" width="70" height="240"/>
+    <rect x="450" y="340" width="60" height="260"/>
+    <rect x="520" y="380" width="85" height="220"/>
+    <rect x="615" y="350" width="65" height="250"/>
+    <rect x="690" y="390" width="80" height="210"/>
+    
+    <!-- Windows -->
+    <g fill="#6366f1" opacity="0.3">
+      <rect x="60" y="420" width="8" height="12"/>
+      <rect x="75" y="420" width="8" height="12"/>
+      <rect x="60" y="445" width="8" height="12"/>
+      <rect x="75" y="445" width="8" height="12"/>
+      <rect x="130" y="370" width="10" height="15"/>
+      <rect x="150" y="370" width="10" height="15"/>
+      <rect x="170" y="370" width="10" height="15"/>
+    </g>
+  </g>
+  
+  <!-- Smog/pollution layer -->
+  <ellipse cx="400" cy="380" rx="350" ry="80" fill="url(#smogGlow)"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">Calidad del Aire - Seúl</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="14" fill="#c4b5fd" text-anchor="middle">Análisis Exploratorio de Contaminantes Atmosféricos</text>
+  
+  <!-- Main dashboard -->
+  <g>
+    <rect x="50" y="100" width="700" height="240" rx="12" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2" opacity="0.95"/>
+    
+    <!-- Left: Pollutant levels -->
+    <g>
+      <text x="80" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">Contaminantes (μg/m³)</text>
+      
+      <!-- PM2.5 -->
+      <g>
+        <rect x="80" y="150" width="180" height="50" rx="6" fill="#7c3aed" opacity="0.8"/>
+        <text x="100" y="170" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">PM2.5</text>
+        <text x="240" y="173" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fbbf24" text-anchor="end">58</text>
+        <rect x="100" y="178" width="130" height="8" rx="4" fill="#1e1b4b"/>
+        <rect x="100" y="178" width="85" height="8" rx="4" fill="#fbbf24"/>
+        <text x="100" y="196" font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd">Moderado</text>
+      </g>
+      
+      <!-- PM10 -->
+      <g>
+        <rect x="80" y="215" width="180" height="50" rx="6" fill="#6366f1" opacity="0.8"/>
+        <text x="100" y="235" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">PM10</text>
+        <text x="240" y="238" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f97316" text-anchor="end">92</text>
+        <rect x="100" y="243" width="130" height="8" rx="4" fill="#1e1b4b"/>
+        <rect x="100" y="243" width="105" height="8" rx="4" fill="#f97316"/>
+        <text x="100" y="261" font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd">Alto</text>
+      </g>
+      
+      <!-- NO2 -->
+      <g>
+        <rect x="80" y="280" width="180" height="50" rx="6" fill="#4f46e5" opacity="0.8"/>
+        <text x="100" y="300" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff">NO₂</text>
+        <text x="240" y="303" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#10b981" text-anchor="end">35</text>
+        <rect x="100" y="308" width="130" height="8" rx="4" fill="#1e1b4b"/>
+        <rect x="100" y="308" width="50" height="8" rx="4" fill="#10b981"/>
+        <text x="100" y="326" font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd">Bajo</text>
+      </g>
+    </g>
+    
+    <!-- Center: Time series chart -->
+    <g>
+      <text x="440" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Tendencia Temporal</text>
+      
+      <!-- Chart background -->
+      <rect x="290" y="150" width="300" height="180" rx="6" fill="#0f0b1f" stroke="#6366f1" stroke-width="1"/>
+      
+      <!-- Grid lines -->
+      <g stroke="#374151" stroke-width="0.5" opacity="0.5">
+        <path d="M290 190 L590 190"/>
+        <path d="M290 230 L590 230"/>
+        <path d="M290 270 L590 270"/>
+        <path d="M290 310 L590 310"/>
+      </g>
+      
+      <!-- PM2.5 line chart -->
+      <path d="M300 280 L330 250 L360 265 L390 240 L420 270 L450 235 L480 260 L510 245 L540 275 L570 250" 
+            stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      
+      <!-- PM10 line chart -->
+      <path d="M300 290 L330 265 L360 280 L390 255 L420 285 L450 250 L480 275 L510 260 L540 295 L570 270" 
+            stroke="#f97316" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+      
+      <!-- Data points -->
+      <g fill="#fbbf24">
+        <circle cx="300" cy="280" r="3"/>
+        <circle cx="390" cy="240" r="3"/>
+        <circle cx="480" cy="260" r="3"/>
+        <circle cx="570" cy="250" r="3"/>
+      </g>
+      
+      <!-- Legend -->
+      <g>
+        <line x1="610" y1="170" x2="630" y2="170" stroke="#fbbf24" stroke-width="2"/>
+        <text x="635" y="174" font-family="Arial, sans-serif" font-size="10" fill="#fbbf24">PM2.5</text>
+        
+        <line x1="610" y1="190" x2="630" y2="190" stroke="#f97316" stroke-width="2"/>
+        <text x="635" y="194" font-family="Arial, sans-serif" font-size="10" fill="#f97316">PM10</text>
+      </g>
+      
+      <!-- Time labels -->
+      <text x="300" y="325" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Ene</text>
+      <text x="390" y="325" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Mar</text>
+      <text x="480" y="325" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Jun</text>
+      <text x="570" y="325" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Sep</text>
+    </g>
+    
+    <!-- Right: Weather correlation -->
+    <g>
+      <text x="680" y="135" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Clima</text>
+      
+      <!-- Temperature -->
+      <g>
+        <circle cx="650" cy="175" r="20" fill="#ef4444" opacity="0.8"/>
+        <text x="650" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">24°</text>
+        <text x="680" y="180" font-family="Arial, sans-serif" font-size="10" fill="#cbd5e1">Temp</text>
+      </g>
+      
+      <!-- Humidity -->
+      <g>
+        <circle cx="650" cy="230" r="20" fill="#06b6d4" opacity="0.8"/>
+        <text x="650" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">65%</text>
+        <text x="680" y="235" font-family="Arial, sans-serif" font-size="10" fill="#cbd5e1">Hum</text>
+      </g>
+      
+      <!-- Wind -->
+      <g>
+        <circle cx="650" cy="285" r="20" fill="#8b5cf6" opacity="0.8"/>
+        <text x="650" y="290" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3.2</text>
+        <text x="680" y="290" font-family="Arial, sans-serif" font-size="10" fill="#cbd5e1">m/s</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom: Key findings -->
+  <g>
+    <rect x="50" y="470" width="700" height="90" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="2" opacity="0.9"/>
+    
+    <text x="400" y="500" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#fff" text-anchor="middle">Hallazgos Clave</text>
+    
+    <g>
+      <circle cx="90" cy="528" r="5" fill="#10b981"/>
+      <text x="105" y="532" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Correlación negativa entre viento y contaminantes</text>
+    </g>
+    
+    <g>
+      <circle cx="420" cy="528" r="5" fill="#fbbf24"/>
+      <text x="435" y="532" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1">Picos en invierno por calefacción</text>
+    </g>
+  </g>
+  
+  <!-- Tech stack -->
+  <g opacity="0.85">
+    <rect x="280" y="565" width="70" height="25" rx="4" fill="#3b82f6"/>
+    <text x="315" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Python</text>
+    
+    <rect x="360" y="565" width="70" height="25" rx="4" fill="#06b6d4"/>
+    <text x="395" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Pandas</text>
+    
+    <rect x="440" y="565" width="90" height="25" rx="4" fill="#8b5cf6"/>
+    <text x="485" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Matplotlib</text>
+  </g>
+</svg>

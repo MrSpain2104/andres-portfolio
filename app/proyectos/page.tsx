@@ -79,7 +79,7 @@ export default function ProyectosPage() {
       title: "Scoring Crediticio (GiveMeSomeCredit)",
       description:
         "Proyecto de “scoring crediticio inteligente” en el que se implementó un pipeline para evaluar la probabilidad de incumplimiento de préstamos. El trabajo incluyó preprocesamiento y limpieza de datos, ingeniería de características, entrenamiento y validación de modelos supervisados, y análisis de resultados para la toma de decisiones crediticias.",
-      image: "/images/credit-scoring.svg",
+      image: "/images/credit-scoring-v2.svg",
       technologies: ["Python", "Jupyter","scikit-learn", "XGBoost", "SMOTE"],
       github: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
       demo: "https://mrspain2104.github.io/credit_scoring_machine_learning/notebooks/01_introduction.html",
@@ -101,7 +101,7 @@ export default function ProyectosPage() {
       title: "Polución y Calidad del Aire en Seúl",
       description:
         "Estudio exploratorio de datos de calidad del aire en Seúl para comprender la variación de contaminantes a lo largo del tiempo y su relación con condiciones meteorológicas. El proyecto busca aportar una visión integral del impacto ambiental urbano mediante técnicas de análisis y visualización en Python.",
-      image: "/images/air-quality-seoul.svg",
+      image: "/images/air-quality-seoul-v2.svg",
       technologies: ["Python", "Pandas", "Matplotlib", "Jupyter"],
       github: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
       demo: "https://juantellas.github.io/EDA_airQuality_Seoul_ver2/intro.html",
@@ -123,7 +123,7 @@ export default function ProyectosPage() {
       title: "PySpark vs scikit-learn  — Lending Club",
       description:
         "Clasificación de estado del préstamo (Default/Fully Paid) con scikit-learn y PySpark MLlib. Incluye interpretabilidad con LIME.",
-      image: "/images/pyspark-rf.svg",
+      image: "/images/pyspark-rf-v2.svg",
       technologies: ["Python", "PySpark", "scikit-learn", "LIME", "Jupyter"],
       github: "https://github.com/omedinaavilla/modeloPyspark",
       demo: "https://omedinaavilla.github.io/modeloPyspark/intro.html",

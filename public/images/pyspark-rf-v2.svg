@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="pyspark-title">
+  <title id="pyspark-title">PySpark vs scikit-learn - Lending Club Classification</title>
+  <defs>
+    <linearGradient id="bgGradSpark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#18181b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27272a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sklearnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="vsGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradSpark)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.05" stroke="#fff" stroke-width="1">
+    <path d="M0 100 L800 100 M0 200 L800 200 M0 300 L800 300 M0 400 L800 400 M0 500 L800 500"/>
+    <path d="M100 0 L100 600 M200 0 L200 600 M300 0 L300 600 M400 0 L400 600 M500 0 L500 600 M600 0 L600 600 M700 0 L700 600"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#fff" text-anchor="middle">PySpark vs scikit-learn</text>
+  <text x="400" y="75" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Lending Club Loan Classification · Random Forest + LIME</text>
+  
+  <!-- VS Circle -->
+  <g>
+    <circle cx="400" cy="300" r="50" fill="url(#vsGlow)"/>
+    <circle cx="400" cy="300" r="40" fill="#fbbf24"/>
+    <text x="400" y="310" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#18181b" text-anchor="middle">VS</text>
+  </g>
+  
+  <!-- Left side: PySpark -->
+  <g>
+    <rect x="50" y="120" width="280" height="360" rx="12" fill="#1c1917" stroke="#f97316" stroke-width="3" opacity="0.95"/>
+    
+    <!-- PySpark header -->
+    <rect x="60" y="130" width="260" height="50" rx="8" fill="url(#sparkGrad)"/>
+    <text x="190" y="162" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">PySpark MLlib</text>
+    
+    <!-- Distributed computing icon -->
+    <g>
+      <rect x="80" y="200" width="50" height="40" rx="4" fill="#f97316" opacity="0.7"/>
+      <rect x="140" y="200" width="50" height="40" rx="4" fill="#f97316" opacity="0.7"/>
+      <rect x="200" y="200" width="50" height="40" rx="4" fill="#f97316" opacity="0.7"/>
+      <text x="80" y="255" font-family="Arial, sans-serif" font-size="11" fill="#fed7aa">Node 1</text>
+      <text x="140" y="255" font-family="Arial, sans-serif" font-size="11" fill="#fed7aa">Node 2</text>
+      <text x="200" y="255" font-family="Arial, sans-serif" font-size="11" fill="#fed7aa">Node 3</text>
+      
+      <!-- Connection lines -->
+      <path d="M105 240 L165 205 M165 240 L165 205 M225 240 L165 205" stroke="#fb923c" stroke-width="2" opacity="0.5"/>
+      
+      <text x="190" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Procesamiento</text>
+      <text x="190" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Distribuido</text>
+    </g>
+    
+    <!-- Metrics -->
+    <g>
+      <rect x="70" y="315" width="240" height="55" rx="6" fill="#27272a" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="190" y="338" font-family="Arial, sans-serif" font-size="11" fill="#fed7aa">Accuracy</text>
+      <text x="190" y="360" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f97316" text-anchor="middle">84.7%</text>
+    </g>
+    
+    <g>
+      <rect x="70" y="385" width="115" height="45" rx="6" fill="#27272a" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="127" y="405" font-family="Arial, sans-serif" font-size="10" fill="#fed7aa" text-anchor="middle">F1-Score</text>
+      <text x="127" y="423" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fb923c" text-anchor="middle">0.82</text>
+    </g>
+    
+    <g>
+      <rect x="195" y="385" width="115" height="45" rx="6" fill="#27272a" stroke="#fb923c" stroke-width="1.5"/>
+      <text x="252" y="405" font-family="Arial, sans-serif" font-size="10" fill="#fed7aa" text-anchor="middle">Time</text>
+      <text x="252" y="423" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fbbf24" text-anchor="middle">12.3s</text>
+    </g>
+    
+    <!-- Footer -->
+    <text x="190" y="460" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Big Data · Escalable</text>
+  </g>
+  
+  <!-- Right side: scikit-learn -->
+  <g>
+    <rect x="470" y="120" width="280" height="360" rx="12" fill="#0c1222" stroke="#3b82f6" stroke-width="3" opacity="0.95"/>
+    
+    <!-- scikit-learn header -->
+    <rect x="480" y="130" width="260" height="50" rx="8" fill="url(#sklearnGrad)"/>
+    <text x="610" y="162" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#fff" text-anchor="middle">scikit-learn</text>
+    
+    <!-- Single machine icon -->
+    <g>
+      <rect x="540" y="200" width="140" height="90" rx="8" fill="#3b82f6" opacity="0.7"/>
+      <circle cx="610" cy="230" r="15" fill="#93c5fd"/>
+      <rect x="570" y="260" width="80" height="10" rx="5" fill="#93c5fd"/>
+      <rect x="585" y="275" width="50" height="6" rx="3" fill="#93c5fd"/>
+      
+      <text x="610" y="310" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Procesamiento</text>
+      <text x="610" y="325" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Local</text>
+    </g>
+    
+    <!-- Metrics -->
+    <g>
+      <rect x="490" y="315" width="240" height="55" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="610" y="338" font-family="Arial, sans-serif" font-size="11" fill="#bfdbfe">Accuracy</text>
+      <text x="610" y="360" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#3b82f6" text-anchor="middle">85.2%</text>
+    </g>
+    
+    <g>
+      <rect x="490" y="385" width="115" height="45" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="547" y="405" font-family="Arial, sans-serif" font-size="10" fill="#bfdbfe" text-anchor="middle">F1-Score</text>
+      <text x="547" y="423" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#60a5fa" text-anchor="middle">0.83</text>
+    </g>
+    
+    <g>
+      <rect x="615" y="385" width="115" height="45" rx="6" fill="#0f172a" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="672" y="405" font-family="Arial, sans-serif" font-size="10" fill="#bfdbfe" text-anchor="middle">Time</text>
+      <text x="672" y="423" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fbbf24" text-anchor="middle">8.7s</text>
+    </g>
+    
+    <!-- Footer -->
+    <text x="610" y="460" font-family="Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Rápido · Fácil uso</text>
+  </g>
+  
+  <!-- Bottom: LIME Interpretability -->
+  <g>
+    <rect x="150" y="500" width="500" height="80" rx="10" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2" opacity="0.95"/>
+    
+    <text x="400" y="530" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">Interpretabilidad con LIME</text>
+    
+    <!-- Feature importance bars -->
+    <g>
+      <rect x="180" y="545" width="100" height="12" rx="6" fill="#8b5cf6"/>
+      <text x="175" y="555" font-family="Arial, sans-serif" font-size="10" fill="#c4b5fd" text-anchor="end">Income</text>
+      
+      <rect x="320" y="545" width="80" height="12" rx="6" fill="#a78bfa"/>
+      <text x="315" y="555" font-family="Arial, sans-serif" font-size="10" fill="#c4b5fd" text-anchor="end">DTI</text>
+      
+      <rect x="440" y="545" width="65" height="12" rx="6" fill="#c4b5fd"/>
+      <text x="435" y="555" font-family="Arial, sans-serif" font-size="10" fill="#c4b5fd" text-anchor="end">FICO</text>
+      
+      <text x="540" y="555" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">→ Explicabilidad local</text>
+    </g>
+  </g>
+  
+  <!-- Tech stack -->
+  <g opacity="0.85">
+    <rect x="240" y="565" width="80" height="25" rx="4" fill="#f97316"/>
+    <text x="280" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">PySpark</text>
+    
+    <rect x="330" y="565" width="90" height="25" rx="4" fill="#3b82f6"/>
+    <text x="375" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">scikit-learn</text>
+    
+    <rect x="430" y="565" width="60" height="25" rx="4" fill="#8b5cf6"/>
+    <text x="460" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">LIME</text>
+    
+    <rect x="500" y="565" width="80" height="25" rx="4" fill="#10b981"/>
+    <text x="540" y="582" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">Jupyter</text>
+  </g>
+</svg>
